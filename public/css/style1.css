@@ -216,7 +216,7 @@ input::-webkit-outer-spin-button {
 .payment-method .method .checkmark {
     color: var(--quick-silver);
     opacity: 0;
-    pointer-events: none;
+    pointer-events: ;
 }
 
 .payment-method .method .fill {
@@ -323,7 +323,6 @@ input::-webkit-outer-spin-button {
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 20px;
 }
 
 .card .product-img {

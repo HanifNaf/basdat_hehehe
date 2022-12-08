@@ -130,8 +130,8 @@
 						</div>
 					</div>
 					<div class="md:flex md:items-center mb-3">
-						<div class="md:w-1/2">
-							<label class="block text-gray-500 text-xl font-bold md:text-left mb-1 md:mb-0 pr-16" for="inline-full-name">
+						<div class="md:w-1/3">
+							<label class="block text-gray-500 text-xl font-bold md:text-left mb-1 md:mb-0 pr-12" for="inline-full-name">
 								Size
 							</label>
 						</div>
@@ -152,7 +152,7 @@
 						</div>
 					</div>
 					<div class="md:flex md:items-center mb-3">
-						<div class="md:w-1/2">
+						<div class="md:w-1/3">
 							<label class="block text-gray-500 text-xl font-bold md:text-left mb-1 md:mb-0 pr-[45px]" for="inline-full-name">
 								Extras
 							</label>
@@ -179,7 +179,7 @@
 					</div>
 
 					<div class="md:flex md:items-center mb-3">
-						<div class="md:w-1/2">
+						<div class="md:w-1/3">
 							<label class="block text-gray-500 text-xl font-bold md:text-left mb-1 md:mb-0 pr-[35px]" for="inline-full-name">
 								Veggies
 							</label>
@@ -232,7 +232,7 @@
 					</div>
 
 					<div class="md:flex md:items-center mb-1">
-						<div class="md:w-1/2">
+						<div class="md:w-1/3">
 							<label class="block text-gray-500 text-xl font-bold md:text-left mb-1 md:mb-0 pr-[35px]" for="inline-full-name">
 								Sauces
 							</label>
@@ -289,15 +289,6 @@
 					<hr>
 					<div class="grid grid-cols-2 flex ">
 						<div class="col-sm-12 col-lg-8">
-							<div class="input-group mb-3">
-								<div class="input-group-prepend">
-									<button class="input-group-text">-</button>
-								</div>
-								<input type="text" class="form-control" value="1">
-								<div class="input-group-append">
-									<button class="input-group-text">+</button>
-								</div>
-							</div>
 						</div>
 						<div class="w-full">
 							<button type="submit" class="list-group-item btn-outline-success pl-3">

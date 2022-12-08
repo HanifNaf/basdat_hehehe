@@ -16,47 +16,47 @@
 <!-- Page Header End -->
 <hr>
 
-	<div class="container">
-		<div class="row align-items-center">
-			<!-- Awal slot produk -->
+<div class="container">
+	<div class="row align-items-center">
+		<!-- Awal slot produk -->
 
-			<!-- Pemisah per produk -->
-			@foreach($beverages as $beverage)
-			<div class="col-md-6 p-2 ">
-				<div class="hvnb">
-					<div class="list-group shadow-sm">
-						<div class="list-group-item gambar-produk"></div>
-						<div class="list-group-item">
+		<!-- Pemisah per produk -->
+		@foreach($beverages as $beverage)
+		<div class="col-md-6 p-2 ">
+			<div class="hvnb">
+				<div class="list-group shadow-sm">
+					<div class="list-group-item gambar-produk"></div>
+					<div class="list-group-item">
 						<img src="{{ asset('img/'.$beverage->image) }}" alt="">
 
-							<h5 class="card-text ">{{$beverage->name}}</h5>
-							<div class="mb-2">
-								<h6 class="active text-website text-warning">Rp {{$beverage->price}}</h6>
-							</div>
-
+						<h5 class="card-text ">{{$beverage->name}}</h5>
+						<div class="mb-2">
+							<h6 class="active text-website text-warning">Rp {{$beverage->price}}</h6>
 						</div>
 
 					</div>
-					<form method="POST" action=""  >
-							@csrf
-							<input type="hidden" name="id" value="{{$beverage->id}}">
-							<input type="hidden" name="name" value="{{$beverage->name}}">
-							<input type="hidden" name="price" value="{{$beverage->price}}">
-							<input type="hidden" name="image" value="{{$beverage->image}}">
 
-							<button type="submit" class="list-group-item btn-outline-success w-full h-full">
-								ADD TO CART
-							</button>
-						</form>
 				</div>
+				<form method="POST" action="{{ route('add_to_cart') }}">
+					@csrf
+					<input type="hidden" name="id" value="{{$beverage->id}}">
+					<input type="hidden" name="name" value="{{$beverage->name}}">
+					<input type="hidden" name="price" value="{{$beverage->price}}">
+					<input type="hidden" name="image" value="{{$beverage->image}}">
+
+					<button type="submit" class="list-group-item btn-outline-success w-full h-full">
+						ADD TO CART
+					</button>
+				</form>
 			</div>
-			@endforeach
-
-			<!-- Pemisah per produk -->
-
-
-			<!-- Pemisah per produk -->
-
-			<!-- Akhir slot produk -->
 		</div>
+		@endforeach
+
+		<!-- Pemisah per produk -->
+
+
+		<!-- Pemisah per produk -->
+
+		<!-- Akhir slot produk -->
 	</div>
+</div>

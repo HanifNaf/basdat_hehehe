@@ -83,23 +83,47 @@
 
               </div>
             </div>
-            <div class="wrapper">
+            <!-- <div class="wrapper">
               <div class="product-qty">
                 <button id="decrement">
                   <ion-icon name="remove-outline"></ion-icon>
                 </button>
+                <input type="hidden" name="id" value="{{$product['id']}}">
 
-                <span id="quantity">1</span>
+                <span id="quantity" name="quantity">1</span>
 
                 <button id="increment">
                   <ion-icon name="add-outline"></ion-icon>
                 </button>
               </div>
 
-            </div>
-            <div class="wrapper col-span2">
+            </div> -->
+            <div class="wrapper">
               <div class="product-qty">
-                <div class="price">Rp <span id="price">{{ $product['price'] }}</span></div>
+                <form method="POST" action="{{route('edit_product_quantity')}}">
+                  @csrf
+                  <div class="flex items-center">
+                    <div class="content-center">
+                      <button class=""><input style="text-align:center;" type="submit" value="-" name="decrease_product_quantity_btn"></button>
+
+                    </div>
+                    <div>
+                      <input type="hidden" name="id" value="{{$product['id']}}">
+                      <input style="text-align:center;" type="number" name="quantity" value="{{$product['quantity']}}" readonly>
+                    </div>
+                    <div class="content-center">
+                      <button><input style="text-align:center;" type="submit" value="+" class="edit-btn" name="increase_product_quantity_btn"></button>
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+            <div class="wrapper col-span-2">
+              <div class="product-qty ">
+                <div class="price pl-10 w-full">
+                  Rp <span id="price">{{ $product['price'] }}</span></div>
 
               </div>
             </div>
@@ -109,11 +133,18 @@
           <button class="product-close-btn">
             <ion-icon name="close-outline"></ion-icon>
           </button>
+          <form method="POST" action="{{ route('remove_from_cart') }}">
+            @csrf
+            <input type="hidden" name="id" value="{{$product['id']}}">
+            <button type="submit" class="product-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </form>
         </div>
 
       </div>
       @endforeach
-        @endif
+      @endif
 
     </div>
 
@@ -124,13 +155,24 @@
 
         <div class="amount">
           <div class="subtotal">
+            @if(Session::has('cart'))
             <span>Subtotal</span>
-            <span>$ <span id="subtotal">2.05</span></span>
+            @if(Session::has('total'))
+
+            <span>Rp <span id="subtotal">{{Session::get('total')}}</span></span>
+            @endif
+
           </div>
+          @endif
 
           <div class="tax">
-            <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
+            @if(Session::has('cart'))
+            <span>Tax</span>
+            @if(Session::has('tax'))
+            <span>Rp <span id="tax">{{Session::get('tax')}}</span></span>
+            @endif
           </div>
+          @endif
 
           <div class="shipping">
             <span>Shipping</span>
@@ -138,13 +180,26 @@
           </div>
 
           <div class="total">
-            <span>Total</span> <span>$ <span id="total">2.15</span></span>
-          </div>
-        </div>
-        <button class="btn btn-primary" style="float:right">
-          <b>Pay</b> $ <span id="payAmount">2.15</span>
-        </button>
+            @if(Session::has('cart'))
 
+            <span>Total</span>
+            @if(Session::has('total_after_tax'))
+            <span>Rp <span id="total">{{Session::get('total_after_tax')}}</span></span>
+            @endif
+          </div>
+          @endif
+        </div>
+
+        <button class="btn btn-primary" style="float:right">
+          @if(Session::has('cart'))
+
+          <b>Pay</b> Rp
+          @if(Session::has('total_after_tax'))
+
+          <span id="payAmount">{{Session::get('total_after_tax')}}</span>
+          @endif
+        </button>
+        @endif
       </div>
     </div>
 
@@ -158,7 +213,7 @@
 <!--
     - custom js link
   -->
-<script src="js/script.js"></script>
+<!-- <script src="js/script.js"></script> -->
 
 <!--
     - ionicon link
