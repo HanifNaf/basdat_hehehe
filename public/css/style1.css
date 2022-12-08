@@ -214,8 +214,9 @@ input::-webkit-outer-spin-button {
 }
 
 .payment-method .method .checkmark {
-    margin-left: auto;
     color: var(--quick-silver);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .payment-method .method .fill {
@@ -302,7 +303,7 @@ input::-webkit-outer-spin-button {
  */
 
 .cart {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -333,7 +334,8 @@ input::-webkit-outer-spin-button {
     font-weight: var(--fw-6);
     font-size: var(--fs-15);
     color: var(--dim-gray);
-    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .card .detail .wrapper {
@@ -411,7 +413,8 @@ input::-webkit-outer-spin-button {
 }
 
 .amount {
-    padding: 40px var(--px);
+    /* padding: 40px var(--px); */
+    padding-bottom: 40px;
 }
 
 .amount > div {

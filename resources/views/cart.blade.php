@@ -30,14 +30,17 @@
     <div class="payment-form">
       <div class="payment-method">
         <button class="method">
-          <span>E-Money</span>
+          <span class="w-full">E-Money</span>
 
-          <input class="checkmark" type="radio" name="pembayaran" value="e_money" />
+          <input class="checkmark" type="hidden" name="pembayaran" value="e_money" />
         </button>
+
         <button class="method">
-          <span>Cash on Delivery</span>
-          <input class="checkmark" type="radio" name="pembayaran" value="cod" />
+          <span class="w-full">Cash on Delivery</span>
+          <input class="checkmark" type="hidden" name="pembayaran" value="cod" />
         </button>
+        
+      
       </div>
     </div>
   </section>
@@ -47,51 +50,38 @@
 
     <div class="payment-form">
       <div class="payment-method">
-        <button class="method">
-          <ion-icon name="card"></ion-icon>
-
-          <span>Alamat 1</span>
-
-          <input class="checkmark" type="radio">
-        </button>
-
-
-        <button class="method">
-          <span>Alamat 2</span>
-
-          <input class="checkmark" type="radio">
-        </button>
-
-
-        <button class="method">
-          <span>Alamat 3 </span>
-          <input class="checkmark" type="radio">
-        </button>
+          <p>
+          Jl. Airlangga No.4 - 6, Airlangga, Kec. Gubeng, Kota SBY, Jawa Timur 60115
+          </p>
       </div>
     </div>
 
-    <button class="btn btn-primary">
-      <b>Pay</b> $ <span id="payAmount">2.15</span>
-    </button>
-
+    <hr />
   </section>
 
   <!--
         - cart section
       -->
 
-  <section class="cart">
-    <div class="cart-item-box">
+  <section class="cart grid grid-cols-4">
+    <div class="cart-item-box col-span-2">
       <h2 class="section-heading">Order Summary</h2>
 
       <div class="product-card">
 
         <div class="card">
-          <div class="detail grid grid-cols-4 w-full justify-center">
-            <img style="width: 75px; height: 75px" src="{{asset('img/aqua.png')}}">
+          <div class="detail grid grid-cols-5 w-full ">
+            <div class="content-center items-center">
+              <img style="width: 75px; height: 75px" src="{{asset('img/aqua.png')}}">
 
-            <h4 class="product-name">Green Tomatoes 1 Kilo</h4>
+            </div>
+            <div class="wrapper col-span-2">
+              <div class="product-qty">
+                <div><span>Green Tomatoes 1 Kilo</span></div>
 
+              </div>
+
+            </div>
             <div class="wrapper">
               <div class="product-qty">
                 <button id="decrement">
@@ -106,39 +96,63 @@
               </div>
 
             </div>
-            <div class="price">$ <span id="price">1.25</span></div>
+
+            <div class="wrapper">
+              <div class="product-qty">
+
+
+                <div class="price">$ <span id="price">1.25</span></div>
+
+
+              </div>
+
+            </div>
 
           </div>
-          
+
 
           <button class="product-close-btn">
             <ion-icon name="close-outline"></ion-icon>
           </button>
         </div>
-      </div>
 
-
-      <div class="amount">
-        <div class="subtotal">
-          <span>Subtotal</span>
-          <span>$ <span id="subtotal">2.05</span></span>
-        </div>
-
-        <div class="tax">
-          <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
-        </div>
-
-        <div class="shipping">
-          <span>Shipping</span>
-          <span>$ <span id="shipping">0.00</span></span>
-        </div>
-
-        <div class="total">
-          <span>Total</span> <span>$ <span id="total">2.15</span></span>
-        </div>
       </div>
     </div>
-  </section>
+    <div class="cart-item-box col-span-2">
+      <h2 class="section-heading" style="color:white">Order Summary</h2>
+
+      <div class="product-card">
+
+        <div class="amount">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <span>$ <span id="subtotal">2.05</span></span>
+          </div>
+
+          <div class="tax">
+            <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
+          </div>
+
+          <div class="shipping">
+            <span>Shipping</span>
+            <span>$ <span id="shipping">0.00</span></span>
+          </div>
+
+          <div class="total">
+            <span>Total</span> <span>$ <span id="total">2.15</span></span>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="float:right">
+          <b>Pay</b> $ <span id="payAmount">2.15</span>
+        </button>
+
+      </div>
+    </div>
+
+
+
+</div>
+</section>
 </div>
 
 <!--
