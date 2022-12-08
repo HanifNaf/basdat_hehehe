@@ -39,8 +39,8 @@
           <span class="w-full">Cash on Delivery</span>
           <input class="checkmark" type="hidden" name="pembayaran" value="cod" />
         </button>
-        
-      
+
+
       </div>
     </div>
   </section>
@@ -50,9 +50,9 @@
 
     <div class="payment-form">
       <div class="payment-method">
-          <p>
+        <p>
           Jl. Airlangga No.4 - 6, Airlangga, Kec. Gubeng, Kota SBY, Jawa Timur 60115
-          </p>
+        </p>
       </div>
     </div>
 
@@ -63,24 +63,25 @@
         - cart section
       -->
 
-  <section class="cart grid grid-cols-4">
-    <div class="cart-item-box col-span-2">
+
+  <section class="cart grid grid-cols-5">
+    <div class="cart-item-box col-span-3">
       <h2 class="section-heading">Order Summary</h2>
 
-      <div class="product-card">
+      @if(Session::has('cart'))
 
+      @foreach(Session::get('cart') as $product)
+      <div class="product-card pb-1">
         <div class="card">
-          <div class="detail grid grid-cols-5 w-full ">
+          <div class="detail grid grid-cols-6 w-full ">
             <div class="content-center items-center">
               <img style="width: 75px; height: 75px" src="{{asset('img/aqua.png')}}">
-
             </div>
             <div class="wrapper col-span-2">
               <div class="product-qty">
-                <div><span>Green Tomatoes 1 Kilo</span></div>
+                <div><span>{{ $product['name'] }}</span></div>
 
               </div>
-
             </div>
             <div class="wrapper">
               <div class="product-qty">
@@ -96,18 +97,12 @@
               </div>
 
             </div>
-
-            <div class="wrapper">
+            <div class="wrapper col-span2">
               <div class="product-qty">
-
-
-                <div class="price">$ <span id="price">1.25</span></div>
-
+                <div class="price">Rp <span id="price">{{ $product['price'] }}</span></div>
 
               </div>
-
             </div>
-
           </div>
 
 
@@ -117,7 +112,11 @@
         </div>
 
       </div>
+      @endforeach
+        @endif
+
     </div>
+
     <div class="cart-item-box col-span-2">
       <h2 class="section-heading" style="color:white">Order Summary</h2>
 
@@ -148,6 +147,7 @@
 
       </div>
     </div>
+
 
 
 

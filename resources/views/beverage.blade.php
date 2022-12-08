@@ -37,7 +37,7 @@
 						</div>
 
 					</div>
-					<form method="POST" action="{{ route('add_to_cart') }}"  >
+					<form method="POST" action=""  >
 							@csrf
 							<input type="hidden" name="id" value="{{$beverage->id}}">
 							<input type="hidden" name="name" value="{{$beverage->name}}">
