@@ -9,5 +9,7 @@ class SnackDetail extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['snack'];
+    protected $table = 'snack_details';
+    protected $fillable = ['name','price','quantity','image'];
 }
+ 

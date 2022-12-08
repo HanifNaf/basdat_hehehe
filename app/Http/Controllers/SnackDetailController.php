@@ -3,23 +3,25 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SnackDetail;
+use Illuminate\Support\Facades\DB;
 
 class SnackDetailController extends Controller
 {
     //
     public function index()
-    {
-        return view('snack');
+    {   
+        $snacks = DB::table('snack_details')->get();
+        return view('snack', ['snacks'=>$snacks]);
     }
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'snack' => "required",
-        ]);
+        $snacks = new SnackDetail();
+        $snacks->snack = $request->input('beverage');
+        $snacks->quantity = $request->input('quantity');
+        $snacks->save();
 
-        SnackDetail::create($validatedData);
-        
-        return redirect('/sides');
+        return redirect('beverage')->with('Success');
+
     }
 }

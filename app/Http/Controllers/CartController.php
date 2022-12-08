@@ -85,8 +85,6 @@ class CartController extends Controller
         }
 
         $request->session()->put('total', $total_price);
-        $request->session()->put('tax', $total_tax);
-        $request->session()->put('total_after_tax', $total_price_after_tax);
         $request->session()->put('quantity', $total_quantity);
     }
 

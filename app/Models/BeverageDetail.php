@@ -10,5 +10,5 @@ class BeverageDetail extends Model
     use HasFactory;
     
     protected $table = 'beverage_details';
-    protected $fillable = ['beverage','quantity'];
+    protected $fillable = ['name','price','quantity','image'];
 }

@@ -75,7 +75,7 @@
         <div class="card">
           <div class="detail grid grid-cols-6 w-full ">
             <div class="content-center items-center">
-              <img style="width: 75px; height: 75px" src="{{asset('img/aqua.png')}}">
+              <img style="width: 75px; height: 75px" src="{{asset('img/'.$product['image'])}}">
             </div>
             <div class="wrapper col-span-2">
               <div class="product-qty">
@@ -109,7 +109,7 @@
                     </div>
                     <div>
                       <input type="hidden" name="id" value="{{$product['id']}}">
-                      <input style="text-align:center;" type="number" name="quantity" value="{{$product['quantity']}}" readonly>
+                      <input style="text-align:center;" type="number" inputmode="numeric" name="quantity" value="{{$product['quantity']}}" readonly>
                     </div>
                     <div class="content-center">
                       <button><input style="text-align:center;" type="submit" value="+" class="edit-btn" name="increase_product_quantity_btn"></button>
@@ -165,14 +165,6 @@
           </div>
           @endif
 
-          <div class="tax">
-            @if(Session::has('cart'))
-            <span>Tax</span>
-            @if(Session::has('tax'))
-            <span>Rp <span id="tax">{{Session::get('tax')}}</span></span>
-            @endif
-          </div>
-          @endif
 
           <div class="shipping">
             <span>Shipping</span>
@@ -183,8 +175,8 @@
             @if(Session::has('cart'))
 
             <span>Total</span>
-            @if(Session::has('total_after_tax'))
-            <span>Rp <span id="total">{{Session::get('total_after_tax')}}</span></span>
+            @if(Session::has('total'))
+            <span>Rp <span id="total">{{Session::get('total')}}</span></span>
             @endif
           </div>
           @endif
@@ -194,9 +186,9 @@
           @if(Session::has('cart'))
 
           <b>Pay</b> Rp
-          @if(Session::has('total_after_tax'))
+          @if(Session::has('total'))
 
-          <span id="payAmount">{{Session::get('total_after_tax')}}</span>
+          <span id="payAmount">{{Session::get('total')}}</span>
           @endif
         </button>
         @endif
