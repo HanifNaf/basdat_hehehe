@@ -64,7 +64,7 @@
                     <a href="{{url('/password')}}"
                     class="btn custom-btn"
                     class="float-left"
-                    href="">
+                    >
                     Lupa Password
                   </a>
                     <hg2>or you dont have an account ? </hg2>
@@ -72,7 +72,7 @@
                       href="{{url('/signup')}}"
                       class="btn custom-btn"
                       class="float-right"
-                      href="">
+                      >
                       Sign Up
                     </a> 
                   </div>

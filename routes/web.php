@@ -26,8 +26,8 @@ Route::get('/login', function () {
 Route::get('/feature', function () {
     return view('feature');
 });
-Route::get('/signup', function () {
-    return view('signup');
+Route::get('/register', function () {
+    return view('register');
 });
 Route::get('/menu', function () {
     return view('menu');
