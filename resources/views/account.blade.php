@@ -18,8 +18,8 @@
       <div class="col-lg-7">
         <div class="booking-content">
           <div class="section-header">
-            <p>Book A Table</p>
-            <h2>Book Your Table For Private Dinners & Happy Hours</h2>
+            <p>Change Information Account</p>
+            <h2>Change Your Information Account For Better Order</h2>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Nomor Telepon" required="required" />
+                <input type="text" class="form-control" placeholder="Username" required="required" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="fa fa-mobile-alt"></i>
@@ -52,6 +52,26 @@
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-envelope"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Change Password" required="required" />
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="far fa-location"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Nomor Telepon" required="required" />
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="far fa-location"></i>
                   </div>
                 </div>
               </div>
@@ -97,7 +117,7 @@
               </div>
             </div>
             <div>
-              <a class="btn custom-btn" type="submit">Go Order</a>
+              <a href="{{url('/')}}" class="btn custom-btn" type="submit">Change Your Account</a>
             </div>
           </form>
         </div>

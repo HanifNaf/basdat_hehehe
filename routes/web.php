@@ -5,6 +5,7 @@ use App\Http\Controllers\SandwichDetailController;
 use App\Http\Controllers\SnackDetailController;
 use App\Http\Controllers\BeverageDetailController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\SandwichController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +27,8 @@ Route::get('/login', function () {
 Route::get('/feature', function () {
     return view('feature');
 });
-Route::get('/signup', function () {
-    return view('signup');
+Route::get('/register', function () {
+    return view('register');
 });
 Route::get('/menu', function () {
     return view('menu');
@@ -52,8 +53,12 @@ Route::get('/sides', function () {
 });
 
 
-Route::get('/sandwich', [SandwichDetailController::class, "index"]);
-Route::post('/sandwich', [SandwichDetailController::class, "store"]);
+Route::get('/sandwich_detail', [SandwichDetailController::class, "index"]);
+Route::post('/sandwich_detail', [SandwichDetailController::class, "store"]);
+
+Route::get('/sandwich', [SandwichController::class, "index"]);
+Route::post('/sandwich', [SandwichController::class, "store"]);
+
 
 Route::get('/sides', [SnackDetailController::class, "index"]);
 Route::post('/sides', [SnackDetailController::class, "store"]);

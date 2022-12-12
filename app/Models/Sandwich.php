@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sandwich extends Model
 {
     use HasFactory;
+    
+    protected $table = 'sandwich';
+    protected $fillable = ['name','price','quantity','image'];
 }

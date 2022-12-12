@@ -3,30 +3,29 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SandwichDetail;
-use Illuminate\Support\Facades\DB;
 
 class SandwichDetailController extends Controller
 {
     //
     public function index()
     {
-        $sandwiches = DB::table('sandwich')->get();
-        return view('sandwich', ['sandwiches'=>$sandwiches]);
+        return view('sandwich.sandwich_detail');
     }
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'sandwich' => "required",
+            'bread' => "required",
+            'size' => 'required',
+            'extras' => 'required',
+            'veggies' => 'required',
+            'sauces' => 'required',
+            
+        ]);
 
-        $sandwiches = new SandwichDetail();
-        $sandwiches->bread = $request->input('bread');
-        $sandwiches->size = $request->input('size')->nullable();
-        $sandwiches->extras = $request->input('extras')->nullable();
-        $sandwiches->veggies = $request->input('veggies')->nullable();
-        $sandwiches->sauces = $request->input('sauces')->nullable();
-
-        $sandwiches->save();
-
+        SandwichDetail::create($validatedData);
         
-        return redirect('sandwich')->with('Success');
+        return redirect('/sandwich_detail');
     }
 }
