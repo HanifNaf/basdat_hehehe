@@ -53,7 +53,6 @@ class CartController extends Controller
             $price = $request->input('price');
             $quantity = $request->input('quantity');
 
-
             $product_array = array(
                 'id' => $id,
                 'name' => $name,

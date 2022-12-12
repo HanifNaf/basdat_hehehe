@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sandwich_details', function (Blueprint $table) {
+        Schema::create('sandwich', function (Blueprint $table) {
             $table->id();
-            $table->string('sandwich');
-            $table->string('bread');
-            $table->string('size');
-            $table->json('extras');
-            $table->json('veggies');
-            $table->json('sauces');
+            $table->string('name');
+            $table->integer('price');
+            $table->integer('quantity');
+            $table->string('image');
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sandwich_details');
+        Schema::dropIfExists('sandwich');
     }
 };
