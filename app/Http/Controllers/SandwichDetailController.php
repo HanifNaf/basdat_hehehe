@@ -9,7 +9,7 @@ class SandwichDetailController extends Controller
     //
     public function index()
     {
-        return view('sandwich');
+        return view('sandwich.sandwich_detail');
     }
 
     public function store(Request $request)
@@ -26,6 +26,6 @@ class SandwichDetailController extends Controller
 
         SandwichDetail::create($validatedData);
         
-        return redirect('/sandwich');
+        return redirect('/sandwich_detail');
     }
 }

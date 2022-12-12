@@ -29,16 +29,20 @@ class CartController extends Controller
                 $price = $request->input('price');
                 $quantity = $request->input('quantity');
 
+                $quantity_cart = $quantity + 1;
+
                 $product_array = array(
                     'id' => $id,
                     'name' => $name,
                     'image' => $image,
                     'price' => $price,
-                    'quantity' => $quantity,
+                    'quantity' => $quantity_cart,
                 );
 
                 $cart[$id] = $product_array;
                 $request->session()->put('cart', $cart);
+                $this->calculateTotalCart($request);
+
             } else {
                 echo '<script>alert("product is already in cart")</script>';
             }
@@ -53,13 +57,15 @@ class CartController extends Controller
             $price = $request->input('price');
             $quantity = $request->input('quantity');
 
+            $quantity_cart = $quantity + 1;
+
 
             $product_array = array(
                 'id' => $id,
                 'name' => $name,
                 'image' => $image,
                 'price' => $price,
-                'quantity' => $quantity
+                'quantity' => $quantity_cart
             );
             $cart[$id] = $product_array;
             $request->session()->put('cart', $cart);
@@ -71,7 +77,7 @@ class CartController extends Controller
     {
         $cart = $request->session()->get('cart');
         $total_price = 0;
-        $total_quantity = 0;
+        $total_quantity = 1;
 
         foreach ($cart as $id => $product) {
             $product = $cart[$id];
