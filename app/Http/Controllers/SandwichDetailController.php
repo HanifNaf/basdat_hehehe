@@ -9,7 +9,7 @@ class SandwichDetailController extends Controller
     //
     public function index()
     {
-        return view('sandwich.sandwich_detail');
+        return view('sandwich.sandwich_details');
     }
 
     public function store(Request $request)

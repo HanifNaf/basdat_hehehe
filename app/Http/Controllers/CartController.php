@@ -68,6 +68,8 @@ class CartController extends Controller
                 'quantity' => $quantity_cart
             );
             $cart[$id] = $product_array;
+            $this->calculateTotalCart($request);
+
             $request->session()->put('cart', $cart);
 
             return view('cart');
