@@ -20,9 +20,9 @@ class BeverageSeeder extends Seeder
     {
         //
         $beverage = [
-            ["name"=>"Kopi", "price"=>3000, "quantity"=>0, "image"=>"aqua.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
-            ["name"=>"Aqua", "price"=>2000, "quantity"=>0, "image"=>"chickslice.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
-            ["name"=>"Pocari", "price"=>8000, "quantity"=>0, "image"=>"chickteriyaki.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')]
+            ["id_beverage"=>2,"name"=>"Kopi", "price"=>3000, "quantity"=>0, "image"=>"aqua.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
+            ["id_beverage"=>2,"name"=>"Aqua", "price"=>2000, "quantity"=>0, "image"=>"chickslice.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
+            ["id_beverage"=>2,"name"=>"Pocari", "price"=>8000, "quantity"=>0, "image"=>"chickteriyaki.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')]
 
 
         ];

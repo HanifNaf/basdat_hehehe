@@ -52,81 +52,9 @@
 									@csrf
 									@method('post')
 									<div class="md:flex md:items-center mb-3">
-										<div class="md:w-1/3">
-											<label class="block text-gray-500 text-xl font-extrabold md:text-left mb-1 md:mb-0 pr-12" for="inline-full-name">
-												Sandwich
-											</label>
-										</div>
-										<div class="md:w-screen">
-											<ul class="w-full grid grid-cols-3">
-												<li>
-													<input id="vd" type="radio" value="Veggie Delite" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-													<label for="vd" class="flex cursor-pointer rounded-l bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Veggie Delite</label>
-													</label>
-												</li>
-												<li>
-													<input id="si" type="radio" value="Spicy Italian" name="sandwich" class="peer opacity-0 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="si" class="flex cursor-pointer  bg-gray-200 justify-center items-center text-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Spicy Italian</label>
-													</label>
-												</li>
-												<li>
-													<input id="ct" type="radio" value="Chicken Teriyaki" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="ct" class="flex cursor-pointer rounded-r  bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Chicken Teriyaki</label>
-													</label>
-												</li>
-												<li>
-													<input id="cs" type="radio" value="Chicken Slice" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-													<label for="cs" class="flex cursor-pointer rounded-l bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Chicken Slice</label>
-													</label>
-												</li>
-												<li>
-													<input id="tm" type="radio" value="Tuna Mayo" name="sandwich" class="peer opacity-0 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="tm" class="flex cursor-pointer  bg-gray-200 justify-center items-center text-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Tuna Mayo</label>
-													</label>
-												</li>
-												<li>
-													<input id="ib" type="radio" value="Italian B.M.T" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="ib" class="flex cursor-pointer rounded-r  bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Italian B.M.T</label>
-													</label>
-												</li>
-												<li>
-													<input id="em" type="radio" value="Egg Mayo" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-													<label for="em" class="flex cursor-pointer rounded-l bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Egg Mayo</label>
-													</label>
-												</li>
-												<li>
-													<input id="sc" type="radio" value="Steak & Cheese" name="sandwich" class="peer opacity-0 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="sc" class="flex cursor-pointer  bg-gray-200 justify-center items-center text-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Steak & Cheese</label>
-													</label>
-												</li>
-												<li>
-													<input id="bc" type="radio" value="BBQ Chicken" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="bc" class="flex cursor-pointer rounded-r  bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">BBQ Chicken</label>
-													</label>
-												</li>
-												<li>
-													<input id="rc" type="radio" value="Roast Chicken" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-													<label for="rc" class="flex cursor-pointer rounded-l bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Roast Chicken</label>
-													</label>
-												</li>
-												<li>
-													<input id="rb" type="radio" value="Roast Beef" name="sandwich" class="peer opacity-0 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="rb" class="flex cursor-pointer  bg-gray-200 justify-center items-center text-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Roast Beef</label>
-													</label>
-												</li>
-												<li>
-													<input id="sa" type="radio" value="Shrimp Avocado" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="sa" class="flex cursor-pointer rounded-r  bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Shrimp Avocado</label>
-													</label>
-												</li>
-												<li>
-													<input id="mm" type="radio" value="Meatball Marinara" name="sandwich" class="peer opacity-0  h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 ">
-													<label for="mm" class="flex cursor-pointer rounded-r  bg-gray-200 justify-center items-center h-10 w-full peer-checked:bg-[#719a0a] peer-checked:text-white text-[14px] text-sm font-medium text-gray-900">Meatball Marinara</label>
-													</label>
-												</li>
-											</ul>
-										</div>
+									
 									</div>
+									<hr>
 									<div class="md:flex md:items-center mb-3">
 										<div class="md:w-1/3">
 											<label class="block text-gray-500 text-xl font-extrabold md:text-left mb-1 md:mb-0 pr-12" for="inline-full-name">

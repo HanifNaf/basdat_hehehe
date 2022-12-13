@@ -104,3 +104,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::post('/place_order', [CartController::class, 'place_order'])->name('place_order');
