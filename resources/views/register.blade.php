@@ -11,7 +11,7 @@
 </div>
 <!-- Page Header End -->
 
-<!-- Booking Start -->
+<!-- Register Start -->
 <div class="booking">
   <div class="container">
     <div class="row align-items-center">
@@ -25,10 +25,14 @@
       </div>
       <div class="col-lg-5">
         <div class="booking-form">
-          <form>
+          <form action="/register" method="POST">
+            @csrf
+            @method('post')
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Username" required="required" />
+                <label for="username" value="{{_('username') }}"></label>
+                <input id="username" type="text" class="form-control" placeholder="Username" required="required"
+                name="username" :value="old('username')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-user"></i>
@@ -38,7 +42,9 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="email" class="form-control" placeholder="Email" required="required" />
+                <label for="email" value="{{_('email') }}"></label>
+                <input id="email" type="text" class="form-control" placeholder="Email" required="required"
+                name="email" :value="old('email')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-envelope"></i>
@@ -48,7 +54,9 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Password" required="required" />
+                <label for="password" value="{{_('password') }}"></label>
+                <input id="password" type="text" class="form-control" placeholder="Password" required="required"
+                name="password" :value="old('password')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>

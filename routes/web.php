@@ -95,3 +95,12 @@ Route::post('/edit_product_quantity', [CartController::class, 'edit_product_quan
 Route::get('edit_product_quantity', function(){
     return redirect('/');
 });
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
