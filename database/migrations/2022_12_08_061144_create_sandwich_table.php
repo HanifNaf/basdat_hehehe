@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('sandwich', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_sandwich');
             $table->string('name');
             $table->integer('price');
             $table->integer('quantity');

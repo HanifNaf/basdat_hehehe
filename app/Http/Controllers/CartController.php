@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
@@ -68,9 +69,9 @@ class CartController extends Controller
                 'quantity' => $quantity_cart
             );
             $cart[$id] = $product_array;
-            $this->calculateTotalCart($request);
 
             $request->session()->put('cart', $cart);
+            $this->calculateTotalCart($request);
 
             return view('cart');
         }
@@ -137,5 +138,38 @@ class CartController extends Controller
             }
         }
         return view('cart');
+    }
+
+    function place_order(Request $request)
+    {
+        if($request->session()->has('cart')){
+            $cart = $request->session()->get('cart');
+            $order_id = rand(0,99999);
+
+            foreach($cart as $id => $product){
+                
+                $product = $cart[$id]; 
+                $product_id = $product['id'];
+                $product_name = $product['name'];
+                $product_price = $product['price'];
+                $product_quantity = $product['quantity'];
+                $product_image = $product['image'];
+    
+                DB::table('orderitems')->insert([
+                    'order_id'=> $order_id,
+                    'product_id'=>$product_id,
+                    'product_name'=>$product_name,
+                    'product_price'=>$product_price,
+                    'product_image'=>$product_image,
+                    'product_quantity'=>$product_quantity,
+                    'order_date'=> date('Y-m-d')
+                ]);
+            }
+            return redirect('/');
+
+        }else{
+            return redirect('/');
+        }
+        
     }
 }

@@ -17,10 +17,10 @@ class SnackSeeder extends Seeder
     {
         //
         $snack = [
-            ["name"=>"snack 1", "price"=>1000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
-            ["name"=>"snack 2", "price"=>2000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
-            ["name"=>"snack 3", "price"=>3000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
-            ["name"=>"snack 4", "price"=>4000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')]
+            ["id_snack"=>3,"name"=>"snack 1", "price"=>1000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
+            ["id_snack"=>3,"name"=>"snack 2", "price"=>2000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
+            ["id_snack"=>3,"name"=>"snack 3", "price"=>3000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')],
+            ["id_snack"=>3,"name"=>"snack 4", "price"=>4000, "quantity"=>0, "image"=>"italian.png", "updated_at"=>date('Y-m-d H:i:s'), "created_at"=>date('Y-m-d H:i:s')]
 
 
 
