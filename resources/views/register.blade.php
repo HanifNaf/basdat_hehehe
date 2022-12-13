@@ -55,8 +55,20 @@
             <div class="control-group">
               <div class="input-group">
                 <label for="password" value="{{_('password') }}"></label>
-                <input id="password" type="text" class="form-control" placeholder="Password" required="required"
-                name="password" :value="old('password')" />
+                <input id="password" type="text" class="form-control" placeholder="Password"
+                name="password" required autocomplete="new-password" />
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="far fa-location"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="input-group">
+                <label for="password_confirmation" value="{{_('password_confirmation') }}"></label>
+                <input id="password_confirmation" type="text" class="form-control" placeholder="Confirm Password"
+                name="password_confirmation" required autocomplete="new-password_confirmation" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>

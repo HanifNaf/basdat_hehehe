@@ -17,11 +17,11 @@ class SnackDetailController extends Controller
     public function store(Request $request)
     {
         $snacks = new SnackDetail();
-        $snacks->snack = $request->input('beverage');
+        $snacks->snack = $request->input('snack');
         $snacks->quantity = $request->input('quantity');
         $snacks->save();
 
-        return redirect('beverage')->with('Success');
+        return redirect('snack')->with('Success');
 
     }
 }

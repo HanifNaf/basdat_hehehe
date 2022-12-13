@@ -28,37 +28,9 @@
           <form>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Nama" required="required" />
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="far fa-user"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Username" required="required" />
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="fa fa-mobile-alt"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="input-group">
-                <input type="email" class="form-control" placeholder="Email" required="required" />
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="far fa-envelope"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Change Password" required="required" />
+                <label for="no_telp" value="{{_('no_telp') }}"></label>
+                <input id="no_telp" type="text" class="form-control" placeholder="Nomor Telepon" required="required"
+                name="no_telp" :value="old('no_telp')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>
@@ -68,7 +40,9 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Nomor Telepon" required="required" />
+                <label for="alamat" value="{{_('alamat') }}"></label>
+                <input id="alamat" type="text" class="form-control" placeholder="Alamat" required="required"
+                name="alamat" :value="old('alamat')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>
@@ -78,7 +52,9 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Alamat" required="required" />
+                <label for="kecamatan" value="{{_('kecamatan') }}"></label>
+                <input id="kecamatan" type="text" class="form-control" placeholder="Kecamatan" required="required"
+                name="kecamatan" :value="old('kecamatan')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>
@@ -88,7 +64,9 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Kecamatan" required="required" />
+                <label for="kelurahan" value="{{_('kelurahan') }}"></label>
+                <input id="kelurahan" type="text" class="form-control" placeholder="Kelurahan" required="required"
+                name="kelurahan" :value="old('kelurahan')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>
@@ -98,17 +76,9 @@
             </div>
             <div class="control-group">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Kelurahan" required="required" />
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="far fa-location"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Kode Pos" required="required" />
+                <label for="kodepos" value="{{_('kodepos') }}"></label>
+                <input id="kodepos" type="text" class="form-control" placeholder="Kodepos" required="required"
+                name="kodepos" :value="old('kodepos')" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="far fa-location"></i>
